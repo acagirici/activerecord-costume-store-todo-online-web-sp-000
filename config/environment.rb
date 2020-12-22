@@ -10,9 +10,4 @@ Dir[File.join(File.dirname(__FILE__), "../app/models", "*.rb")].each {|f| requir
 
 connection_details = YAML::load(File.open('config/database.yml'))
 
-ActiveRecord::Base.establish_connection(
-  :adapter => "sqlite3" ,
-  :database => "db/halloween.sqlite"
-  )
-
-require_relative "../app/models/costume.rb"
+ActiveRecord::Base.establish_connection(connection_details)
