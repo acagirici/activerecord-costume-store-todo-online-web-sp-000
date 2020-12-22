@@ -15,4 +15,4 @@ ActiveRecord::Base.establish_connection(
   :database => "db/halloween.sqlite"
   )
 
-require_relative "../costume.rb"
+require_relative "../app/models/costume.rb"
